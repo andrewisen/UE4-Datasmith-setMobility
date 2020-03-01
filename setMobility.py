@@ -55,7 +55,7 @@ def main():
 	# 	0 = STATIC
 	# 	1 = STATIONARY
 	#	2 = MOVABLE
-	mobilityStates = [ "STATIC", "STATIONARY","MOVABLE"]
+	mobilityStates = ["STATIC", "STATIONARY","MOVABLE"]
 	mobility = mobilityStates[2]
 
 	# Set mobility for all Static Mesh Actors in the level
