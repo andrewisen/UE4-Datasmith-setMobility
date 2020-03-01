@@ -4,24 +4,24 @@ The script changes the mobility of Static Mesh Actors.
 
 ## Background
 Given an [Autodesk Revit](https://www.autodesk.com/products/revit/overview) model. 
-Assume one wants to create a game/application where users can try different layouts.
+Assume one wants to create a game/application where users can try different layouts.</br>
 I.e. move the furnitures around and find the best placement. 
 
 ![Autodesk Revit 2020](/screenshots/screenshot-01.jpg?raw=true)
 
-By using [Datasmith](https://www.unrealengine.com/en-US/datasmith) one could import said Revit file.
+By using [Datasmith](https://www.unrealengine.com/en-US/datasmith), one could import said Revit file.
 
 ![Unreal Engine 4.24](/screenshots/screenshot-02.jpg?raw=true)
 
 The problem occurs when working with the furnitures in the level.</br>
-I.e. the imported Revit objects.</br></br>
+I.e. the imported Revit objects.</br>
 
 These objects are stationary by defualt.</br>
 There movability should be **MOVABLE**.
 
 ![Mobility](/screenshots/screenshot-03.jpg?raw=true)
 
-This scripts sets the mobility to **MOVABLE** for all furnitures.
+This scripts sets the mobility to **MOVABLE** for all furnitures.</br>
 In summary, one does not have to click on each individual object. 
 
 ## Getting Started
@@ -30,7 +30,8 @@ In summary, one does not have to click on each individual object.
 
 N.B. Datasmith should be included with 4.24. [Read more](https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_24/index.html)
 
-Make sure the `Python Editor Script Plugin` and the `Datasmith Importer Plugin` are enabled. 
+Make sure the `Python Editor Script Plugin` and the `Datasmith Importer Plugin` are enabled.
+
 ![Plugins](/screenshots/screenshot-04.jpg?raw=true)
 
 ### Usage
@@ -56,3 +57,13 @@ Set which element categories should be affected:</br></br>
 
 E.g. `metadataValues = ["Furniture"]` will only affect objects that are categorized as *furnitures*.
 
+## Built with
+* [Python 3.7.2](https://www.python.org/downloads/release/python-372/)
+* [Unreal Python API](https://docs.unrealengine.com/en-US/PythonAPI/index.html)
+
+## Contact
+[kontakt "at" andrewisen.se](mailto:kontakt@andrewisen.se)
+
+## Acknowledgments
+*  [Aleksi Torhamo](https://stackoverflow.com/a/20228312) - Using `__import__` to dynamically import modules
+*  [Ned Batchelder](https://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html) - Security warnings regarding `Eval()`
