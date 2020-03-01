@@ -44,7 +44,7 @@ def setMobility(staticMeshActors,mobility):
 				print("Set mobility to " + mobility + " for: "+ actor.get_name())
 				actor.set_mobility(eval("unreal.ComponentMobility." + mobility))
 
-def main()
+def main():
 	# Tested with Python 3.7.2
 	importUnreal()
 
@@ -56,7 +56,7 @@ def main()
 	# 	1 = STATIONARY
 	#	2 = MOVABLE
 	mobilityStates = [ "STATIC", "STATIONARY","MOVABLE"]
-	mobility = mobilityStates[0]
+	mobility = mobilityStates[2]
 
 	# Set mobility for all Static Mesh Actors in the level
 	setMobility(getStaticMeshActors(),mobility)
