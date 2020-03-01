@@ -2,21 +2,41 @@
 Python script for Unreal Engine 4 (UE4) and Datasmith.</br>
 The script changes the mobility of Static Mesh Actors.
 
+## Background
+Given an [Autodesk Revit](https://www.autodesk.com/products/revit/overview) model. 
+Assume one wants to create a game/application where users can try different layouts.
+I.e. move the furnitures around and find the best placement. 
+
+![Autodesk Revit 2020](/screenshots/screenshot-01.jpg?raw=true)
+
+By using [Datasmith](https://www.unrealengine.com/en-US/datasmith) one could import said Revit file.
+
+![Unreal Engine 4.24](/screenshots/screenshot-02.jpg?raw=true)
+
+The problem occurs when working with the furnitures in the level.</br>
+I.e. the imported Revit objects.</br></br>
+
+These objects are stationary by defualt.</br>
+There movability should be **MOVABLE**.
+
+![Mobility](/screenshots/screenshot-03.jpg?raw=true)
+
+This scripts sets the mobility to **MOVABLE** for all furnitures.
+In summary, one does not have to click on each individual object. 
+
 ## Getting Started
 ### Prerequisite
 * [Unreal Engine 4.24 or higher](https://www.unrealengine.com/en-US/get-now)
 
 N.B. Datasmith should be included with 4.24. [Read more](https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_24/index.html)
 
+Make sure the `Python Editor Script Plugin` and the `Datasmith Importer Plugin` are enabled. 
+![Plugins](/screenshots/screenshot-04.jpg?raw=true)
+
 ### Usage
-Make sure you know how to use Python in UE4.</br>
-See: [Scripting the Editor using Python](https://docs.unrealengine.com/en-US/Engine/Editor/ScriptingAndAutomation/Python/index.html)
+In addition, make sure you know how to use Python in UE4.</br>
+See: [Scripting the Editor using Python](https://docs.unrealengine.com/en-US/Engine/Editor/ScriptingAndAutomation/Python/index.html)</br>
 </br>
-</br>
-
-### TODO
-
-### TODO
 Then, simply run the script by using via `File->Execute Python Script` in UE4.
 
 ## Customize
