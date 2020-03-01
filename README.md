@@ -13,23 +13,26 @@ Make sure you know how to use Python in UE4.</br>
 See: [Scripting the Editor using Python](https://docs.unrealengine.com/en-US/Engine/Editor/ScriptingAndAutomation/Python/index.html)
 </br>
 </br>
+
+### TODO
+
+### TODO
 Then, simply run the script by using via `File->Execute Python Script` in UE4.
 
 ## Customize
 ### Mobility states
-Set the mobily state by changing the variable:</br>
-`mobility = mobilityStates[state]`</br>
+Set the mobily state by changing the variable:</br></br>
+`mobility = mobilityStates[state]`</br></br>
 where `state` is one of the following:
 * 0 = STATIC
 * 1 = STATIONARY
 * 2 = MOVABLE
 
-</br>
 E.g. `mobility = mobilityStates[2]` sets the mobility to MOVABLE.
 
 ### Static Mesh Actors
-Set which element categories should be affected.
+Set which element categories should be affected:</br></br>
 `metadataValues = ["Cat1", "Cat2", "Cat3"]`
 
-E.g. `metadataValues = ["Furniture"]` will only affect objects that are categorized as furnitures 
+E.g. `metadataValues = ["Furniture"]` will only affect objects that are categorized as *furnitures*.
 
