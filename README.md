@@ -5,8 +5,8 @@ The script changes the mobility of Static Mesh Actors.
 ## Getting Started
 ### Prerequisite
 * [Unreal Engine 4.24 or higher](https://www.unrealengine.com/en-US/get-now)
-</br>
-N.B. Datasmith should be included with 4.24 ([Read more](https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_24/index.html)).
+
+N.B. Datasmith should be included with 4.24. [Read more](https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_24/index.html)
 
 ### Usage
 Make sure you know how to use Python in UE4.</br>
