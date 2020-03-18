@@ -26,13 +26,13 @@ if($s_fileType != $s_allowedFileType){
 
 if ($b_uploadStatus == 0){
     echo '<script>' . 'console.log("' . $s_uploadMessage . '");' . '</script>';
-    echo '<script> location.replace("./index.php?fileNotUploaded");</script>';
+    echo '<script> location.replace("./index.php?status=fileNotUploaded");</script>';
 }
 
 move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $s_targetFileName);
 $s_uploadMessage = "Upload Status: The file ". basename($_FILES["fileToUpload"]["name"]). " has been uploaded.";
 echo '<script>' . 'console.log("' . $s_uploadMessage . '");' . '</script>';
 
-echo '<script> location.replace("./index.php?fileUploaded");</script>';
+echo '<script> location.replace("./index.php?status=fileUploaded");</script>';
 
 ?>
