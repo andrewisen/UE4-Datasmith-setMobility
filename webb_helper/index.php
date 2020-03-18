@@ -55,15 +55,44 @@ sort($ElementCategories);
 echo '<form action="/action_page.php">';
 $i = 1;
 foreach($ElementCategories as $category){
-	echo '<input type="checkbox" id="category' . $i . '" name="category' . $i . '" value="'. $category . '">';
+	echo '<input type="checkbox" id="category' . $i . '" name="category" value="'. $category . '" onClick="getSelectedCategories(this)">';
 	echo '<label for="category'.$i.'">'.$category.'</label><br>';
 	$i++;
 }
+echo '<p id="demo"></p>';
 echo '<input type="submit" value="Submit">';
+echo '<input type="checkbox" onClick="toggle(this)" />Select All<br/>';
 echo '</form>';
 
-
 ?>
+
+<script>
+function toggle(source) {
+	// Credit: Can Berk Guder
+	// https://stackoverflow.com/a/386303
+	checkboxes = document.getElementsByName('category');
+	for(var i=0, n = checkboxes.length;i<n; i++){
+		checkboxes[i].checked = source.checked;
+	}
+	getSelectedCategories();
+}
+
+function getSelectedCategories(source) {
+
+	string = "";
+	checkboxes = document.getElementsByName('category');
+	for(var i=0, n=checkboxes.length;i<n;i++) {
+		if (checkboxes[i].checked == true){
+			string += checkboxes[i].value + ",";
+		}
+
+	}
+	console.log(string);
+	document.getElementById("demo").innerHTML = string;
+}
+</script>
+
+
 
 
 </body>
