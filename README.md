@@ -7,11 +7,11 @@ Given an [Autodesk Revit](https://www.autodesk.com/products/revit/overview) mode
 Assume one wants to create a game/application where users can try different layouts.</br>
 I.e. move the furnitures around and find the best placement. 
 
-![Autodesk Revit 2020](/screenshots/screenshot-01.jpg?raw=true)
+![Autodesk Revit 2020](docs/screenshots/screenshot-01.jpg?raw=true)
 
 By using [Datasmith](https://www.unrealengine.com/en-US/datasmith), one could import said Revit file.
 
-![Unreal Engine 4.24](/screenshots/screenshot-02.jpg?raw=true)
+![Unreal Engine 4.24](docs/screenshots/screenshot-02.jpg?raw=true)
 
 The problem occurs when working with the furnitures in the level.</br>
 I.e. the imported Revit objects.</br>
@@ -19,7 +19,7 @@ I.e. the imported Revit objects.</br>
 These objects are stationary by defualt.</br>
 There movability should be **MOVABLE**.
 
-![Mobility](/screenshots/screenshot-03.jpg?raw=true)
+![Mobility](docs/screenshots/screenshot-03.jpg?raw=true)
 
 This scripts sets the mobility to **MOVABLE** for all furnitures.</br>
 In summary, one does not have to click on each individual object. 
@@ -32,7 +32,7 @@ N.B. Datasmith should be included with 4.24. [Read more](https://docs.unrealengi
 
 Make sure the `Python Editor Script Plugin` and the `Datasmith Importer Plugin` are enabled.
 
-![Plugins](/screenshots/screenshot-04.jpg?raw=true)
+![Plugins](docs/screenshots/screenshot-04.jpg?raw=true)
 
 ### Usage
 In addition, make sure you know how to use Python in UE4.</br>
