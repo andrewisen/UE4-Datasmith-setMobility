@@ -114,16 +114,19 @@
 	</div>
 
 
-<div class="my-3 p-3 bg-white rounded box-shadow">
+<div id="div-03" class="my-3 p-3 bg-white rounded box-shadow">
 		<h6 class="border-bottom border-gray pb-2 mb-0">3. Export config file</h6>
 		<div class="media text-muted pt-3">
 			<div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
 			<p><strong class="d-block text-gray-dark">Copy the following null</strong></p>
 
-			<input type="text" readonly class="form-control" id="demo" placeholder="(Please upload a file)">
+			<input type="text" readonly class="form-control" id="demo" placeholder="(Please select a category)">
 
 			<br>
-			<button type="button" class="btn btn-primary" onclick="copyConfigText()">Copy text</button>
+
+			<button type="submit" type="button" class="btn btn-primary" id="downloadPythonButton">Download Pyhton Script</button>
+			<button type="submit" type="button" class="btn btn-primary" onclick="downloadPythonFile()">Download Pyhton Script</button>
+			<button type="button" class="btn btn-secondary" onclick="copyConfigText()">Copy text</button>
 			</div>
 
 
