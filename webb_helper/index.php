@@ -178,7 +178,9 @@
 
 		}
 		string = string.substring(0, string.length - 2);
-		string += "]";
+		if (string.length>0){
+			string += "]";	
+		}
 		console.log(string);
 		document.getElementById("demo").value =  string;
 	}
