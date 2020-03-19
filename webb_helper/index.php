@@ -236,10 +236,14 @@ if(!empty($_GET)){
 		echo '<script type="text/javascript">' . 'toggleDIV("div-02");' . '</script>' ;
 		echo '<script type="text/javascript">' . 'toggleDIV("div-03");' . '</script>' ;
 	}
-} else{
+	echo "<script type='text/javascript'>" . "document.getElementById('uploadMessage').innerHTML = '". $uploadMessage . "'" . "</script>" ;
+} else {
 	$uploadMessage  = "no file uploaded";
 	echo '<script type="text/javascript">' . 'toggleDIV("div-03");' . '</script>' ;
 	echo '<script type="text/javascript">' . 'toggleDIV("div-02");' . '</script>' ;
+
+	echo "<script type='text/javascript'>" . "document.getElementById('uploadMessage').innerHTML = '". $uploadMessage . "'" . "</script>" ;
+
 }
 
 
