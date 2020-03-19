@@ -187,6 +187,9 @@
 		$('#downloadPythonButton').click(function(){
 			var url = $("#demo").val();
 			url = '"' + url + '"';
+			
+			// Credit: Victor
+			// https://stackoverflow.com/a/15758129
 			$.ajax({
 				type: "POST",
 				url: 'getPythonScript.php',
