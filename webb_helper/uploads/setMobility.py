@@ -28,7 +28,7 @@ def setMobility(staticMeshActors,mobility):
 	# NB. The "Datasmith User Data" is located inside in the "Asset User Data" of the actor.
 	# See: https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/Overview/UsingDatasmithMetadata/index.html
 	metadataKey = "Element_Category"
-	metadataValues = "[Roofs, Topography, Walls]"
+	metadataValues = "[Doors, Topography]"
 
 	for metadataValue in metadataValues:
 		for actor in staticMeshActors:
