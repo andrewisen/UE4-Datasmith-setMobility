@@ -149,6 +149,22 @@
 </footer>
 
 <script>
+	function forceReload(){
+		if (!window.location.href.split("?")[1]){return;}
+		// do stuff
+	}
+	function toggleDIV(divID) {
+		
+		var x = document.getElementById(divID);
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
+
+
+
 	function toggle(source) {
 		// Credit: Can Berk Guder
 		// https://stackoverflow.com/a/386303
