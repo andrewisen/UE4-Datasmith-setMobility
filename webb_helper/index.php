@@ -12,62 +12,73 @@
 
 	<title>Datasmith Helper</title>
 </head>
-<body class="bg-light">
-<?
-if(!empty($_GET)){
-	$status = $_GET['status'];
-	if ($status=="fileUploaded"){
-		$uploadMessage  = "File uploaded successfully! Please continue with next the section.";
-	} else {
-		$uploadMessage  = "Upload failed!";
-	}
-} else{
-	$uploadMessage  = "no file uploaded";
-}
-?>
+<body class="bg-light" onload="forceReload()">
+
+	<!-- Bootstrap CDN -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
 
 <?php
-	$ElementCategories = array();
-
-	$xmlData = file_get_contents("./uploads/datasmith.udatasmith");
-	$xmlData =preg_replace('/&(?!#?[a-z0-9]+;)/', '&amp;', $xmlData);
+	function getDatasmithData(){
 
 
-	$xml = simplexml_load_string($xmlData);
-	if ($xml === false) {
-	    echo "Failed loading XML: ";
-	    foreach(libxml_get_errors() as $error) {
-	        echo "<br>", $error->message;
-	    }
-	} else {
-	    //print_r($xml->MetaData[0]);
-	    //echo "<br><br>";
-	    //var_dump($xml->MetaData);
+		$ElementCategories = array();
+		$file = "./uploads/datasmith.udatasmith";
 
-	    foreach($xml->MetaData as $metaData) {
-	    	foreach($metaData as $KeyValueProperty){
-	    		if ($KeyValueProperty["name"] != "Element_Category"){
-	    			continue;
-	    		}
-	    		array_push($ElementCategories,$KeyValueProperty["val"]);
 
-	    	}
-	    }
+		if (file_exists($file)) {
+			//echo "The file $file  exists";
+		} else {
+			//echo "The file $file  does not exist";
+
+		}
+
+
+		$xmlData = file_get_contents($file);
+		//unlink($file);
+
+		$xmlData = preg_replace('/&(?!#?[a-z0-9]+;)/', '&amp;', $xmlData);
+
+
+		$xml = simplexml_load_string($xmlData);
+		if ($xml === false) {
+		    echo "Failed loading XML: ";
+		    foreach(libxml_get_errors() as $error) {
+		        echo "<br>", $error->message;
+		    }
+		} else {
+		    //print_r($xml->MetaData[0]);
+		    //echo "<br><br>";
+		    //var_dump($xml->MetaData);
+
+		    foreach($xml->MetaData as $metaData) {
+		    	foreach($metaData as $KeyValueProperty){
+		    		if ($KeyValueProperty["name"] != "Element_Category"){
+		    			continue;
+		    		}
+		    		array_push($ElementCategories,$KeyValueProperty["val"]);
+
+		    	}
+		    }
+		}
+
+		$ElementCategories = array_unique($ElementCategories);
+
+		// Force sorting
+		$s_ElementCategories = implode("*",$ElementCategories);
+		$ElementCategories = explode("*",$s_ElementCategories);
+		// Force sorting
+
+		sort($ElementCategories);
+		return $ElementCategories;
 	}
-
-	$ElementCategories = array_unique($ElementCategories);
-
-	// Force sorting
-	$s_ElementCategories = implode("*",$ElementCategories);
-	$ElementCategories = explode("*",$s_ElementCategories);
-	// Force sorting
-
-	sort($ElementCategories);
 
 ?>
 
 <main role="main" class="container">
-
 	<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 		<img class="mr-3" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
 			<div class="lh-100">
@@ -76,11 +87,11 @@ if(!empty($_GET)){
 			</div>
 		</div>
 
-	<div class="my-3 p-3 bg-white rounded box-shadow">
+	<div id="div-01" class="my-3 p-3 bg-white rounded box-shadow">
 		<h6 class="border-bottom border-gray pb-2 mb-0">1. Upload Datasmith file</h6>
 		<div class="media text-muted pt-3">
 			<form class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" action="./uploadDatasmithFile.php" method="post" enctype="multipart/form-data">
-				<p><strong class="d-block text-gray-dark">Select an .udatasmith file to upload:</strong></p>
+				<p><strong class="d-block text-gray-dark">Choose an .udatasmith file to upload.</strong></p>
 				<p><input type="file" name="fileToUpload" id="fileToUpload"></p>
 				<p><input type="submit" value="Upload File" name="submit"> <? echo $uploadMessage ?></p> 
 			</form>
