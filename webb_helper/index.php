@@ -19,8 +19,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-
-
 <?php
 	function getDatasmithData(){
 
@@ -125,21 +123,13 @@
 			<br>
 
 			<button type="submit" type="button" class="btn btn-primary" id="downloadPythonButton">Download Pyhton Script</button>
-			<button type="submit" type="button" class="btn btn-primary" onclick="downloadPythonFile()">Download Pyhton Script</button>
 			<button type="button" class="btn btn-secondary" onclick="copyConfigText()">Copy text</button>
 			</div>
-
-
-			
-
 		</div>
-
-	
 		<small class="d-block text-right mt-3">
 			<a href="#">Help</a>
 		</small>
 	</div>
-
 </main>
 
 <footer class="footer pt-4 my-md-5 pt-md-5 border-top">
