@@ -257,13 +257,56 @@
 
 
 
-
-
 </script>
-<!-- Bootstrap CDN -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<?
+// Main php function 
+if(!empty($_GET)){
+	$status = $_GET['status'];
+	if ($status=="fileUploaded"){
+		$uploadMessage  = "File uploaded successfully!";
+		$ElementCategories = getDatasmithData();
+		echoDatamsithData($ElementCategories);
+	} else {
+		$uploadMessage  = "Upload failed!";
+		echo '<script type="text/javascript">' . 'toggleDIV("div-02");' . '</script>' ;
+		echo '<script type="text/javascript">' . 'toggleDIV("div-03");' . '</script>' ;
+	}
+} else{
+	$uploadMessage  = "no file uploaded";
+	echo '<script type="text/javascript">' . 'toggleDIV("div-03");' . '</script>' ;
+	echo '<script type="text/javascript">' . 'toggleDIV("div-02");' . '</script>' ;
+}
+
+
+	function echoDatamsithData($ElementCategories){
+		$div = "";
+		$div .= 
+		$div .=  '<form class="media-body pb-3 mb-0 lh-125 border-bottom border-gray" action="/action_page.php">';
+		$div .=  '<p class="small"><strong class="d-block text-gray-dark">Select the Revit categories that you wish to use.</strong></p>';
+		$div .=  '<div class="form-check">';
+
+		$i = 1;
+		foreach($ElementCategories as $category){
+			$div .=  '<input class="form-check-input" type="checkbox" id="category' . $i . '" name="category" value="'. $category . '" onClick="getSelectedCategories(this)">';
+			$div .=  '<label class="form-check-label" for="category'.$i.'">'.$category.'</label><br>';
+			$i++;
+		}
+
+		$div .=  '<small class="d-block mt-3"><a href="javascript:toggle(this);">Select All</a></small>';
+		//echo '<input type="submit" value="Submit">';
+		//echo '<input class="form-check-input" type="checkbox" onClick="toggle(this)" /><p class="small">Select All</p><br/>';
+		$div .=  '</div>';
+		$div .=  '</form>';
+		//echo '<p id="demo"></p>';
+		echo "<script type='text/javascript'>" . "document.getElementById('listCategories').innerHTML = '". $div. "'" . "</script>" ;
+
+
+
+	}
+
+?>
+
+
 
 </body>
 </html>
