@@ -177,19 +177,77 @@
 
 	function getSelectedCategories(source) {
 
-		string = "";
+		var string = "";
+		string += "["
 		checkboxes = document.getElementsByName('category');
 		for(var i=0, n=checkboxes.length;i<n;i++) {
 			if (checkboxes[i].checked == true){
-				string += checkboxes[i].value + ",";
+
+				string += checkboxes[i].value + ", ";
 			}
 
 		}
+		string = string.substring(0, string.length - 2);
+		string += "]";
 		console.log(string);
-		document.getElementById("demo").value = string;
+		document.getElementById("demo").value =  string;
 	}
+	$(document).ready(function(){
+
+		$('#downloadPythonButton').click(function(){
+			var url = $("#demo").val();
+			url = '"' + url + '"';
+			$.ajax({
+				type: "POST",
+				url: 'getPythonScript.php',
+				dataType: 'json',
+				data: {functionname: 'add', arguments: [url]},
+
+				success: function (obj, textstatus) {
+				      if( !('error' in obj) ) {
+				          yourVariable = obj.result;
+				          alert('A');
+				      }
+				      else {
+				          console.log(obj.error);
+				          alert('B');
+				      }
+				}
+			});
+			
+			window.open("./forceDownload.php", "_blank",);
+
+		});
+	});
 
 
+
+	function downloadPythonFile(){
+		var mobilityString = document.getElementById("demo").value;
+
+		/*
+		// Credit: Victor
+		// https://stackoverflow.com/a/15758129
+		alert("sss")
+		jQuery.ajax({
+			type: "POST",
+			url: './getPythonScript.php',
+			dataType: 'json',
+			data: {functionname: 'add', arguments: [1, 2]},
+
+			success: function (obj, textstatus) {
+			          if( !('error' in obj) ) {
+			              yourVariable = obj.result;
+			          }
+			          else {
+			              console.log(obj.error);
+			          }
+			    }
+		});
+		*/
+
+
+	}
 	function copyConfigText() {
 		var copyText = document.getElementById("demo");
 		copyText.select();
