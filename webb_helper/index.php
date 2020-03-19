@@ -102,32 +102,9 @@
 		</small>
 	</div>
 
-	<div class="my-3 p-3 bg-white rounded box-shadow">
+	<div id="div-02" class="my-3 p-3 bg-white rounded box-shadow">
 		<h6 class="border-bottom border-gray pb-2 mb-0">2. Select Revit Categories</h6>
-		<div class="media text-muted pt-3">
-
-<?
-
-	echo '<form class="media-body pb-3 mb-0 lh-125 border-bottom border-gray" action="/action_page.php">';
-	echo '<p class="small"><strong class="d-block text-gray-dark">Select categories</strong></p>';
-	echo '<div class="form-check">';
-
-	$i = 1;
-	foreach($ElementCategories as $category){
-		echo '<input class="form-check-input" type="checkbox" id="category' . $i . '" name="category" value="'. $category . '" onClick="getSelectedCategories(this)">';
-		echo '<label class="form-check-label" for="category'.$i.'">'.$category.'</label><br>';
-		$i++;
-	}
-
-	echo '<small class="d-block mt-3"><a href="javascript:toggle(this);">Select All</a></small>';
-	//echo '<input type="submit" value="Submit">';
-	//echo '<input class="form-check-input" type="checkbox" onClick="toggle(this)" /><p class="small">Select All</p><br/>';
-	echo '</div>';
-	echo '</form>';
-	//echo '<p id="demo"></p>';
-
-?>
-
+		<div id="listCategories" class="media text-muted pt-3">
 
 		</div>
 	
