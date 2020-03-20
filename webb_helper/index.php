@@ -83,6 +83,19 @@
 				</div>
 			</div>
 
+		<div id="div-about" class="my-3 p-3 bg-white rounded box-shadow">
+			<h6 class="border-bottom border-gray pb-2 mb-0">About</h6>
+			<div class="media text-muted pt-3">
+				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+					Given an Autodesk Revit model. Assume one wants to create a game/application where users can try different layouts. I.e. move the furnitures around and find the best placement.  
+				</p>
+			</div>
+		
+			<small class="d-block text-right mt-3">
+				<a href="#" data-toggle="modal" data-target="#helpModalAbout">More Info</a>
+			</small>
+		</div>
+
 		<div id="div-01" class="my-3 p-3 bg-white rounded box-shadow">
 			<h6 class="border-bottom border-gray pb-2 mb-0">1. Upload Datasmith file</h6>
 			<div class="media text-muted pt-3">
