@@ -107,7 +107,7 @@
 			</div>
 		
 			<small class="d-block text-right mt-3">
-				<a href="#">Help</a>
+				<a href="#" data-toggle="modal" data-target="#helpModal01">Help</a>
 			</small>
 		</div>
 
@@ -118,7 +118,7 @@
 			</div>
 		
 			<small class="d-block text-right mt-3">
-				<a href="#">Help</a>
+				<a href="#" data-toggle="modal" data-target="#helpModal02">Help</a>
 			</small>
 		</div>
 
@@ -138,7 +138,7 @@
 				</div>
 			</div>
 			<small class="d-block text-right mt-3">
-				<a href="#">Help</a>
+				<a href="#" data-toggle="modal" data-target="#helpModal03">Help</a>
 			</small>
 		</div>
 	</main>
