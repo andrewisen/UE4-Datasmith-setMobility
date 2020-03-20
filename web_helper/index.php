@@ -63,6 +63,10 @@
 			    }
 			}
 
+			if (empty($ElementCategories )) {
+				echo "Empty array!!";
+			}
+
 			$ElementCategories = array_unique($ElementCategories);
 
 			// Force sorting
