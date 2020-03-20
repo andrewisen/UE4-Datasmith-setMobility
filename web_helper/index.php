@@ -18,23 +18,25 @@
 	<body class="bg-light" onload="forceReload()">
 
 	<?php
-		function getDatasmithData(){
+		function getDatasmithData($fileName){
 
 
 			$ElementCategories = array();
-			$file = "./uploads/datasmith.udatasmith";
+			$file = "./uploads/" . $fileName . ".udatasmith";
 
 
 			if (file_exists($file)) {
-				//echo "The file $file  exists";
+				echo "The file $file  exists";
 			} else {
-				//echo "The file $file  does not exist";
+				echo "The file $file  does not exist";
+				echo "<script type='text/javascript'>" . "document.getElementById('listCategories').innerHTML = '". "nooo file" . "'" . "</script>" ;
+				return 0;
 
 			}
 
 
 			$xmlData = file_get_contents($file);
-			//unlink($file);
+			unlink($file);
 
 			$xmlData = preg_replace('/&(?!#?[a-z0-9]+;)/', '&amp;', $xmlData);
 
