@@ -105,7 +105,7 @@
 		<div id="div-01" class="my-3 p-3 bg-white rounded box-shadow">
 			<h6 class="border-bottom border-gray pb-2 mb-0">1. Upload Datasmith file</h6>
 			<div class="media text-muted pt-3">
-				<form class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" action="./uploadDatasmithFile.php" method="post" enctype="multipart/form-data">
+				<form class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" action="./php/uploadDatasmithFile.php" method="post" enctype="multipart/form-data">
 					<p><strong class="d-block text-gray-dark">Choose an .udatasmith file to upload.</strong></p>
 					<p><input type="file" name="fileToUpload" id="fileToUpload"></p>
 					<p><input type="submit" value="Upload File" name="submit"> <text id="uploadMessage"></text></p> 
@@ -357,8 +357,15 @@
 			$status = $_GET['status'];
 			if ($status=="fileUploaded"){
 				$uploadMessage  = "File uploaded successfully!";
-				$ElementCategories = getDatasmithData();
-				echoDatamsithData($ElementCategories);
+				$fileName = $_GET['fileName'];
+				$ElementCategories = getDatasmithData($fileName);
+				if ($ElementCategories != 0){
+					echoDatamsithData($ElementCategories);	
+				} else {
+					echo '<script type="text/javascript">' . 'toggleDIV("div-03");' . '</script>' ;
+				}
+
+				
 			} else {
 				$uploadMessage  = "Upload failed!";
 				echo '<script type="text/javascript">' . 'toggleDIV("div-02");' . '</script>' ;
