@@ -149,6 +149,81 @@
 	      </div>
 	</footer>
 
+	<!-- Modal About -->
+	<div class="modal fade" id="helpModalAbout" tabindex="-1" role="dialog" aria-labelledby="helpModalAbout" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">About Datasmith Helper</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+				<p>Epic Games's Unreal Datasmith (<code>.udatasmith</code>) is a file standard that is used to import 3D scenes into Unreal Engine projects.</p>
+				<p>See: <a href="https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/InstallingExporterPlugin/index.html" target="_blank">Installing the Datasmith Exporter Plugin for Revit</a></p>
+				<p>See: <a href="https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/ExportingDatasmithContentfromRevit/index.html" target="_blank">Exporting Datasmith Content from Revit</a></p>
+
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary"  data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal 01 -->
+	<div class="modal fade" id="helpModal01" tabindex="-1" role="dialog" aria-labelledby="helpModal01" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">1. Upload Datasmith file</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+				<p>Epic Games's Unreal Datasmith (<code>.udatasmith</code>) is a file standard that is used to import 3D scenes into Unreal Engine projects.</p>
+				<p>See: <a href="https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/InstallingExporterPlugin/index.html" target="_blank">Installing the Datasmith Exporter Plugin for Revit</a></p>
+				<p>See: <a href="https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/ExportingDatasmithContentfromRevit/index.html" target="_blank">Exporting Datasmith Content from Revit</a></p>
+
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary"  data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal 02 -->
+	<div class="modal fade" id="helpModal02" tabindex="-1" role="dialog" aria-labelledby="helpModal02" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">2. Select Revit Categories</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+				<p>Use the checkbox to select one or mulltiple <code>Revit categories</code> that you wish to use to use the Python script with.</p>
+				<p>Please note that the categories are derived from the file you've uploaded. A list of all the categories can be found <a href="https://forum.dynamobim.com/t/list-of-all-revit-categories/1732" target="_blank">here</a>.</p>
+				
+				<div class="alert alert-primary" role="alert">
+					<p><b>Category:</b> A Category controls the organization, visibility, graphical representations, and scheduling options of Families within the Project.</p>
+					<p><b>Family:</b> A Family is a grouping of 2D and/or 3D information that serves to represent a discrete building or documentation element in the Project. It defines parametric, graphical, and documentation requirements.</p>
+					<p><b>Type:</b> A Type is a specific representation in a Family defined by distinct parametric, Type graphical, and documentation characteristics which makes it unique from other Types in the Family.</p>
+					<p><b>Instance:</b> An Instance is an individual representation of a Type in the Project defined by unique parametric, graphical, and documentation characteristics which makes it unique from other Instances in the Project</p>
+				</div>
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary"  data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Bootstrap CDN -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
