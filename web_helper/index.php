@@ -280,6 +280,37 @@
 			console.log(string);
 			document.getElementById("demo").value =  string;
 		}
+
+		$(document).ready(function(){
+
+			$('#uploadDatasmithFile').click(function(){
+
+				alert("foo");
+							
+				// Credit: Victor
+				// https://stackoverflow.com/a/15758129
+				$.ajax({
+					type: "POST",
+					url: 'php/uploadDatasmithFile.php',
+					dataType: 'json',
+					data: {functionname: 'add', arguments: "null"},
+
+					success: function (obj, textstatus) {
+					      if( !('error' in obj) ) {
+					          yourVariable = obj.result;
+					          alert('A');
+					      }
+					      else {
+					          console.log(obj.error);
+					          alert('B');
+					      }
+					}
+				});	
+		
+			});
+
+		});
+
 		$(document).ready(function(){
 
 			$('#downloadPythonButton').click(function(){
