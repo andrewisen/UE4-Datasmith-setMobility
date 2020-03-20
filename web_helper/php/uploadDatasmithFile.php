@@ -1,6 +1,8 @@
 <?php
-	$s_targetDirectory = "./uploads/";
-	$s_targetFileName = $s_targetDirectory . "datasmith.udatasmith";
+
+	$s_targetDirectory = "../uploads/";
+	$s_targetTempName = strtolower(basename($_FILES["fileToUpload"]["tmp_name"]));
+	$s_targetFileName = $s_targetDirectory . $s_targetTempName . ".udatasmith";
 	$b_uploadStatus = 1;
 	$s_fileType = strtolower(pathinfo($s_targetDirectory . basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION));
 
@@ -26,12 +28,16 @@
 
 	if ($b_uploadStatus == 0){
 	    echo '<script>' . 'console.log("' . $s_uploadMessage . '");' . '</script>';
-	    echo '<script> location.replace("./index.php?status=fileNotUploaded");</script>';
+	    echo '<script> location.replace("../index.php?status=fileNotUploaded");</script>';
+	    
 	}
 
 	move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $s_targetFileName);
 	$s_uploadMessage = "Upload Status: The file ". basename($_FILES["fileToUpload"]["name"]). " has been uploaded.";
 	echo '<script>' . 'console.log("' . $s_uploadMessage . '");' . '</script>';
 
-	echo '<script> location.replace("./index.php?status=fileUploaded");</script>';
+	$headerName = "fileName=" . $s_targetTempName;
+	echo '<script> location.replace("../index.php?status=fileUploaded&'.$headerName.'");</script>';
+	exit();
+
 ?>
