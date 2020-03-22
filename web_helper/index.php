@@ -137,7 +137,7 @@
 
 
 	<div id="div-03" class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">3. Export config file</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">3. Export Config File</h6>
 			<div class="media text-muted pt-3">
 				<div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
 				<p><strong class="d-block text-gray-dark">Copy the following null</strong></p>
