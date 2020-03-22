@@ -37,12 +37,9 @@ Make sure the `Python Editor Script Plugin` and the `Datasmith Importer Plugin` 
 ![Plugins](docs/screenshots/screenshot-04.jpg?raw=true)
 
 ### Usage
-1. Export Datasmith Content from Revit.</br>
-[Read more](https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/ExportingDatasmithContentfromRevit/index.html)
-2. Import Datasmith Conent into EU4.</br>
-See: [Read more](https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/HowTo/ImportingContent/index.html)
-3. Enable Python in UE4.</br>
-See: [Read more](https://docs.unrealengine.com/en-US/Engine/Editor/ScriptingAndAutomation/Python/index.html)
+1. Export Datasmith Content from Revit [(Read more)](https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/ExportingDatasmithContentfromRevit/index.html).
+2. Import Datasmith Conent into EU4 [(Read more)](https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/HowTo/ImportingContent/index.html).
+3. Enable Python in UE4 [(Read more)](https://docs.unrealengine.com/en-US/Engine/Editor/ScriptingAndAutomation/Python/index.html).
 4. Run the script in UE4 via `File->Execute Python Script`.
 
 ## Customize
