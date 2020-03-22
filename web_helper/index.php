@@ -20,20 +20,27 @@
 	<?php
 		function getDatasmithData($fileName){
 
-
 			$ElementCategories = array();
 			$file = "./uploads/" . $fileName . ".udatasmith";
 
-
 			if (file_exists($file)) {
-				echo "The file $file  exists";
+				//echo "The file $file  exists";
+				echo '<script>' . 'console.log("The file ' . $file . ' exists");' . '</script>';
 			} else {
-				echo "The file $file  does not exist";
-				echo "<script type='text/javascript'>" . "document.getElementById('listCategories').innerHTML = '". "nooo file" . "'" . "</script>" ;
+
+				$errorMessage = "<p>";
+				$errorMessage .= "Couldn&apos;t load your file.";
+				$errorMessage .= "<br>";
+				$errorMessage .= "Try uploading it again!";
+				$errorMessage .= "<br><br>";
+				$errorMessage .= 'Otherwise, try <a href="./index.php">force reload</a>.';
+				$errorMessage .= "</p>";
+	
+				echo '<script>' . 'console.log("The file ' . $file . ' does not exists");' . '</script>';
+				echo "<script type='text/javascript'>" . "document.getElementById('listCategories').innerHTML = '". $errorMessage . "'" . "</script>" ;
 				return 0;
 
 			}
-
 
 			$xmlData = file_get_contents($file);
 			unlink($file);
