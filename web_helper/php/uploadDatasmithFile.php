@@ -27,9 +27,9 @@
 	}
 
 	if ($b_uploadStatus == 0){
-	    echo '<script>' . 'console.log("' . $s_uploadMessage . '");' . '</script>';
-	    echo '<script> location.replace("../index.php?status=fileNotUploaded");</script>';
-	    
+	   echo '<script>' . 'console.log("' . $s_uploadMessage . '");' . '</script>';
+	   echo '<script> location.replace("../index.php?status=fileNotUploaded");</script>';
+	   exit();
 	}
 
 	move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $s_targetFileName);
