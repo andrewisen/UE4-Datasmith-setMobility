@@ -1,5 +1,6 @@
 # Custom
 web_helper/uploads/setMobility.py
+web_helper/uploads/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
