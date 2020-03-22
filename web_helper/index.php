@@ -237,6 +237,27 @@
 		</div>
 	</div>
 
+	<!-- Modal 03 -->
+	<div class="modal fade" id="helpModal03" tabindex="-1" role="dialog" aria-labelledby="helpModal03" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">3. Export Config File</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+				<p>Download the Python script.</p>
+				
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary"  data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Bootstrap CDN -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
