@@ -1,15 +1,13 @@
 # UE4 Datasmith - Set Mobility
-Python Script for [Unreal Engine 4 (UE4)](https://www.unrealengine.com/en-US/features) and [Datasmith](https://www.unrealengine.com/en-US/datasmith).</br>
-The script changes the [mobility](https://docs.unrealengine.com/en-US/Engine/Actors/Mobility/index.html) of [Static Mesh Actors](https://docs.unrealengine.com/en-US/Engine/Actors/StaticMeshActor/index.html).</br></br>
+[Python](https://www.python.org) script for [Unreal Engine 4 (UE4)](https://www.unrealengine.com/en-US/features) and [Datasmith](https://www.unrealengine.com/en-US/datasmith).</br>
+The script changes the [mobility](https://docs.unrealengine.com/en-US/Engine/Actors/Mobility/index.html) of [Static Mesh Actors](https://docs.unrealengine.com/en-US/Engine/Actors/StaticMeshActor/index.html).</br>
 
 Use the [Web Helper](https://github.andrewisen.se/UE4-Datasmith-setMobility/) to generate a Python file.</br>
 Simply follow the instructions on the website and click "Download Python Script".
 
 ## Background
 Given an [Autodesk Revit](https://www.autodesk.com/products/revit/overview) model. 
-Assume one wants to create a game/application in UE4 where users can try interact with the world geometry.
-</br>
-E.g. Try different room layouts by moving the furnitures around.
+Assume one wants to create a game/application in UE4 where users can try interact with the world geometry. E.g. Try different room layouts by moving the furnitures around.
 
 ![Autodesk Revit 2020](docs/screenshots/screenshot-01.jpg?raw=true)
 
@@ -29,6 +27,7 @@ In summary, one does not have to click on each individual object.
 
 ## Getting Started
 ### Prerequisite
+* [Unreal Datasmith Exporter for Autodesk Revit](https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/InstallingExporterPlugin/index.html)
 * [Unreal Engine 4.24 or higher](https://www.unrealengine.com/en-US/get-now)
 
 N.B. Datasmith should be included with 4.24. [Read more](https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_24/index.html)
@@ -38,10 +37,12 @@ Make sure the `Python Editor Script Plugin` and the `Datasmith Importer Plugin` 
 ![Plugins](docs/screenshots/screenshot-04.jpg?raw=true)
 
 ### Usage
-First, make sure you know how to use Python in UE4.</br>
+1. Export Datasmith Content from Revit. See: [https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/ExportingDatasmithContentfromRevit/index.html](https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/ExportingDatasmithContentfromRevit/index.html)
+2. Import Datasmith Conent into EU4. See: [https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/HowTo/ImportingContent/index.html](https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/HowTo/ImportingContent/index.html)
+3. Enable Python in UE4.</br>
 See: [Scripting the Editor using Python](https://docs.unrealengine.com/en-US/Engine/Editor/ScriptingAndAutomation/Python/index.html)</br>
 </br>
-Then, simply run the script by using via `File->Execute Python Script` in UE4.
+4. Run the script in UE4 via `File->Execute Python Script`.
 
 ## Customize
 ### Mobility states
