@@ -8,7 +8,7 @@
 
 
 	$s_allowedFileType = "udatasmith";
-	$i_allowedfileSize = 500000; // Allowed File Size in kB.
+	$i_allowedfileSize = 500000;
 
 	$s_uploadMessage = "";
 
