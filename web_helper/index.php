@@ -390,10 +390,10 @@
 				if ($ElementCategories != 0){
 					echoDatamsithData($ElementCategories);	
 				} else {
+						$uploadMessage  = "Couldn&apos;t load your file. Try uploading it again!";
+						echo "<script type='text/javascript'>" . "document.getElementById('uploadMessage').innerHTML = '". $uploadMessage . "'" . "</script>" ;
 					echo '<script type="text/javascript">' . 'toggleDIV("div-03");' . '</script>' ;
 				}
-
-				
 			} else {
 				$uploadMessage  = "Upload failed!";
 				echo '<script type="text/javascript">' . 'toggleDIV("div-02");' . '</script>' ;
