@@ -100,7 +100,9 @@
 			<h6 class="border-bottom border-gray pb-2 mb-0">About</h6>
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-					Given an Autodesk Revit model. Assume one wants to create a game/application where users can try different layouts. I.e. move the furnitures around and find the best placement.  
+					This website helps you generate a custom Python Script for <a href="https://www.unrealengine.com/en-US/features" target="_blank">Unreal Engine 4 (UE4)</a>.<br>
+					When you import an <a href="https://www.autodesk.com/products/revit/overview" target="_blank">Autodesk Revit</a> model with <a href="https://www.unrealengine.com/en-US/datasmith" target="_blank">Datasmith</a>, all objects are <a href="https://docs.unrealengine.com/en-US/Engine/Actors/Mobility/index.html" target="_blank">stationary</a> by default.<br><br>
+					This script sets the mobility to <b>MOVALBE</b> for all objects within a certain cetegory.
 				</p>
 			</div>
 		
@@ -173,9 +175,8 @@
 					</button>
 				</div>
 				<div class="modal-body">
-				<p>Epic Games's Unreal Datasmith (<code>.udatasmith</code>) is a file standard that is used to import 3D scenes into Unreal Engine projects.</p>
-				<p>See: <a href="https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/InstallingExporterPlugin/index.html" target="_blank">Installing the Datasmith Exporter Plugin for Revit</a></p>
-				<p>See: <a href="https://docs.unrealengine.com/en-US/Engine/Content/Importing/Datasmith/SoftwareInteropGuides/Revit/ExportingDatasmithContentfromRevit/index.html" target="_blank">Exporting Datasmith Content from Revit</a></p>
+				<p>More information can be found on the <a href="https://github.com/andrewisen/UE4-Datasmith-setMobility" target="_blank">GitHub Repo</a>.
+				</p>
 
 				</div>
 				<div class="modal-footer">
