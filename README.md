@@ -6,8 +6,9 @@ Use the [Web Helper](https://github.andrewisen.se/UE4-Datasmith-setMobility/) to
 Simply follow the instructions on the website and click "Download Python Script".
 
 ## Background
-Given an [Autodesk Revit](https://www.autodesk.com/products/revit/overview) model. 
-Assume one wants to create a game/application in UE4 where users can try interact with the world geometry. E.g. Try different room layouts by moving the furnitures around.
+Given an [Autodesk Revit](https://www.autodesk.com/products/revit/overview) model.</br>
+Assume one wants to create a game/application in UE4 where users can try interact with the world geometry.</br>
+E.g. Try different room layouts by moving the furnitures around.
 
 ![Autodesk Revit 2020](docs/screenshots/screenshot-01.jpg?raw=true)
 
@@ -18,12 +19,19 @@ By using [Datasmith](https://www.unrealengine.com/en-US/datasmith), one could im
 A problem occurs when working with the objects in the level.</br>
 
 All imported Revit objects are stationary by defualt.</br>
-Their movability should be **MOVABLE**.
+Their movability should be set to **MOVABLE**.
 
 ![Mobility](docs/screenshots/screenshot-03.jpg?raw=true)
 
 This scripts sets the mobility from **STATIC** to **MOVABLE** for all selected objects.</br>
-In summary, one does not have to click on each individual object. 
+In summary, one does not have to click on each individual object.
+
+### Example
+The [Collab Viewer Template](https://docs.unrealengine.com/en-US/Resources/Templates/CollabViewer/index.html) joins multiple people together in a shared experience of the same 3D content.</br>
+It's intended to make it easier and quicker for your team to review and communicate about designs in realtime, so that you can identify problems and iterate on the content more efficiently.</br></br>
+
+If you want to transform (i.e. move) certain objects, these objects should be set to **MOVABLE**.</br>
+The Python Script might come in handy. 
 
 ## Getting Started
 ### Prerequisite
@@ -59,6 +67,12 @@ Set which element categories should be affected:</br></br>
 
 E.g. `metadataValues = ["Furniture"]` will only affect objects that are categorized as *furnitures*.
 
+## Further Documentation
+Further documentation can be found inside each folder.
+
+* [Python Script](https://github.com/andrewisen/UE4-Datasmith-setMobility/tree/master/UE4_Script)
+* [Web Helper](https://github.com/andrewisen/UE4-Datasmith-setMobility/tree/master/web_helper)
+
 ## Built with
 * [Python 3.7.2](https://www.python.org/downloads/release/python-372/)
 * [Unreal Python API](https://docs.unrealengine.com/en-US/PythonAPI/index.html)
@@ -69,3 +83,4 @@ E.g. `metadataValues = ["Furniture"]` will only affect objects that are categori
 ## Acknowledgments
 *  [Aleksi Torhamo](https://stackoverflow.com/a/20228312) - Using `__import__` to dynamically import modules
 *  [Ned Batchelder](https://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html) - Security warnings regarding `Eval()`
+* [Victor](https://stackoverflow.com/a/15758129) - Calling php function with AJAX and jQuery
