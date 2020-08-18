@@ -116,7 +116,7 @@
 			<div class="media text-muted pt-3">
 				<form class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" action="./php/uploadDatasmithFile.php" method="post" enctype="multipart/form-data">
 					<p><strong class="d-block text-gray-dark">Choose an .udatasmith file to upload.</strong></p>
-					<p><input type="file" name="fileToUpload" id="fileToUpload"></p>
+					<p><input type="file" name="fileToUpload" id="fileToUpload" accept=".udatasmith"></p>
 					<p><input type="submit" value="Upload File" name="submit"> <text id="uploadMessage"></text></p> 
 				</form>
 			</div>
