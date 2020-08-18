@@ -366,7 +366,7 @@
 					}
 				});
 				
-				window.open("./forceDownload.php", "_blank",);
+				window.open("./php/forceDownload.php", "_blank",);
 
 			});
 		});
